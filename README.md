@@ -5,8 +5,6 @@ We also create a website and a server to use the model.
 
 The credit for building the entire project goes to the youtube channel "codebasics".
 
-# Potato Disease Classification
-
 ## Setup for Python:
 
 1. Install Python ([Setup instructions](https://wiki.python.org/moin/BeginnersGuide))
