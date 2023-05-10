@@ -1,108 +1,70 @@
-# Plant-Disease-Detection-and-Classification
-This project involves the use of CNN to identify and classify plant diseases. 
+# Getting Started with Create React App
 
-We also create a website and a server to use the model.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The credit for building the entire project goes to the youtube channel "codebasics".
+## Available Scripts
 
-## Setup for Python:
+In the project directory, you can run:
 
-1. Install Python ([Setup instructions](https://wiki.python.org/moin/BeginnersGuide))
+### `npm start`
 
-2. Install Python packages
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
-pip3 install -r training/requirements.txt
-pip3 install -r api/requirements.txt
-```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-3. Install Tensorflow Serving ([Setup instructions](https://www.tensorflow.org/tfx/serving/setup))
+### `npm test`
 
-## Setup for ReactJS
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Install Nodejs ([Setup instructions](https://nodejs.org/en/download/package-manager/))
-2. Install NPM ([Setup instructions](https://www.npmjs.com/get-npm))
-3. Install dependencies
+### `npm run build`
 
-```bash
-cd frontend
-npm install --from-lock-json
-npm audit fix
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-4. Copy `.env.example` as `.env`.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-5. Change API url in `.env`.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Training the Model
+### `npm run eject`
 
-1. Download the data from [kaggle](https://www.kaggle.com/arjuntejaswi/plant-village).
-2. Run Jupyter Notebook in Browser.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```bash
-jupyter notebook
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-4. Open `training/plant-disease-training.ipynb` in Jupyter Notebook.
-5. In cell #2, update the path to dataset.
-6. Run all the Cells one by one.
-7. Copy the model generated and save it with the version number in the `models` folder.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Running the API
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### Using FastAPI
+## Learn More
 
-1. Get inside `api` folder
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-cd api
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-2. Run the FastAPI Server using uvicorn
+### Code Splitting
 
-```bash
-uvicorn main:app --reload --host 0.0.0.0
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-3. Your API is now running at `0.0.0.0:8000`
+### Analyzing the Bundle Size
 
-### Using FastAPI & TF Serve
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-1. Get inside `api` folder
+### Making a Progressive Web App
 
-```bash
-cd api
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-2. Copy the `models.config.example` as `models.config` and update the paths in file.
-3. Run the TF Serve (Update config file path below)
+### Advanced Configuration
 
-```bash
-docker run -t --rm -p 8501:8501 -v C:/Code/plant-disease-classification:/plant-disease-classification tensorflow/serving --rest_api_port=8501 --model_config_file=/plant-disease-classification/models.config
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-4. Run the FastAPI Server using uvicorn
-   For this you can directly run it from your main.py or main-tf-serving.py using pycharm run option (as shown in the video tutorial on codebasics potato disease playlist)
-   OR you can run it from command prompt as shown below,
+### Deployment
 
-```bash
-uvicorn main-tf-serving:app --reload --host 0.0.0.0
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-5. Your API is now running at `0.0.0.0:8000`
+### `npm run build` fails to minify
 
-## Running the Frontend
-
-1. Get inside `api` folder
-
-```bash
-cd frontend
-```
-
-2. Copy the `.env.example` as `.env` and update `REACT_APP_API_URL` to API URL if needed.
-3. Run the frontend
-
-```bash
-npm run start
-```
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
