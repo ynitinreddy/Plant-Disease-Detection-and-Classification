@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../models/1")
+MODEL = tf.keras.models.load_model("models/1")
 CLASS_NAMES = ['Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot',
                'Corn_(maize)___Common_rust_', 'Corn_(maize)___Northern_Leaf_Blight',
                'Corn_(maize)___healthy', 'Potato___Early_blight',
